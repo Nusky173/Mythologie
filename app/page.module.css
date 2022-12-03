@@ -111,6 +111,11 @@
   margin-left: 0.5rem;
 }
 
+.button {
+  padding: 8px 10px;
+  width: auto;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

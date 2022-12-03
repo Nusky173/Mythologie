@@ -1,0 +1,65 @@
+#root {
+    height: 100%;
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    background: var(--color-bg-variant);
+    height: 65px;
+    align-items: center;
+    padding: 8px;
+  }
+  
+  .title {
+    flex: 1 0;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .logo, .logobutton {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .logo a .logobutton {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .logo {
+    background:  no-repeat center center / contain url("../public/favicon.ico");
+    
+    margin-left: 12px;
+  }
+  
+  .main {
+    flex: 1 0;
+    height: 100%;
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 325px;
+    flex: 0 1 20%;
+    padding: 24px;
+    background: var(--color-sidebar-bg);
+  }
+  
+  .content {
+    flex: 1 0;
+    width: auto;
+    background-image: url("../public/bg-texture.png");
+  }
+  
+  .test-mdx {
+    font-size: 2rem;
+    color: red;
+  }
