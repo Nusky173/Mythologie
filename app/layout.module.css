@@ -29,15 +29,19 @@
     height: 32px;
   }
   
-  .logo a .logobutton {
+  /* .logo a .logobutton {
     width: 32px;
     height: 32px;
   }
-  
-  .logo {
-    background:  no-repeat center center / contain url("../public/favicon.ico");
-    
+   */
+  .logo {    
     margin-left: 12px;
+  }
+
+  .logobutton {
+    background-color: var(--color-bg-variant);
+    background:  no-repeat center center / contain url("../public/favicon.ico");
+    border: none;
   }
   
   .main {
@@ -49,7 +53,6 @@
   .sidebar {
     width: 325px;
     flex: 0 1 20%;
-    padding: 24px;
     background: var(--color-sidebar-bg);
   }
   

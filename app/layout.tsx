@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SideBar from '../component/sidebar/sidebar';
 import './globals.css'
 import styles from './layout.module.css'
 
@@ -24,7 +25,9 @@ export default function RootLayout({
             </div>
             <h1 className={styles.title}> Mythologie </h1>
           </header>
-          <main className={styles.main}>        <aside className={styles.sidebar}>
+          <main className={styles.main}>
+            <aside className={styles.sidebar}>
+              <SideBar />
             </aside>
             <section className={styles.content}>
               {children}

@@ -3,7 +3,6 @@ export default function Personality({
   }: {
     params: { mythology: string, type: string, personality: string };
   }) {
-    console.log(params);
 
     return (
         <div>

@@ -3,7 +3,6 @@ export default function Mythology({
   }: {
     params: { mythology: string };
   }) {
-    console.log(params);
 
     return (
         <div>

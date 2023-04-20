@@ -5,7 +5,6 @@ export default function Type({
   }: {
     params: { mythology: string, type: string };
   }) {
-    console.log(params);
 
     return (
         <div>
