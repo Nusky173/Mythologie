@@ -1,12 +1,26 @@
-export default function Mythology({
+import { getPostData } from '../../lib/posts';
+
+export default async function Mythology({
     params,
   }: {
     params: { mythology: string };
   }) {
 
+    const {title, type, contentHtml } = await getPostData(params.mythology, params.mythology)
+
     return (
         <div>
-            Je suis la page de la mythologie {params.mythology}
+           <h1>
+             {title}
+           </h1>
+           <h3>
+             {type}
+           </h3>
+           <article>
+            <section dangerouslySetInnerHTML={{ __html: contentHtml}}>
+
+            </section>
+           </article>
         </div>
     )
 }

@@ -6,6 +6,8 @@ export default function Type({
     params: { mythology: string, type: string };
   }) {
 
+    
+
     return (
         <div>
             Je suis la page {params.type} de la mythologie {params.mythology}

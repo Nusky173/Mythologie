@@ -1,6 +1,6 @@
 'use client'
 
-import { tabsObject } from "../../app/type";
+import { tabsObject } from "../../type";
 import styles from "./sidebar.module.css"
 import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
@@ -53,7 +53,6 @@ const SideBar = () => {
         else {
             const text = setLocationTextRec(locationArray, navBarInit, 1).replaceAll(" ", " / ");
             setLocationText(text);
-            console.log("text", text);
         }
     }
 
@@ -98,8 +97,6 @@ const SideBar = () => {
     const findCurrentTabsObjectRec = (array: string[], recursiveArray: tabsObject[], depth: number) : tabsObject => {
         let result: tabsObject;
         let i = 0;
-
-        console.log("arr", array);
         
         while(i < recursiveArray.length) {
 
@@ -128,8 +125,6 @@ const SideBar = () => {
     const setBufferNavBar = () => {
         const bufferArray = pathname.split("/");
         let parentRoute = "";
-
-        console.log("bufferArr", bufferArray)
 
         bufferArray.forEach((e, i) => {
             if(i < bufferArray.length -1) {
@@ -161,8 +156,6 @@ const SideBar = () => {
 
             const locationArray = pathname.split("/");
             const currentTabsObject = findCurrentTabsObjectRec(locationArray, navBarInit, 1 );
-
-            console.log("currentTabsObject", currentTabsObject);
 
             if(currentTabsObject?.subTabs!.length <= 0) {
                 setBufferNavBar();

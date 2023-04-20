@@ -4,3 +4,10 @@ export type tabsObject = {
     id: string;
     route: string;
 }
+
+export type BlogPost = {
+    id: string;
+    title: string;
+    type: string;
+}
+

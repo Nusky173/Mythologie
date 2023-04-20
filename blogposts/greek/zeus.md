@@ -1,0 +1,6 @@
+---
+title: 'Zeus'
+type: 'God'
+---
+
+Zeus est le dieu suprême de la mythologie grecque, gouvernant le ciel et la foudre. Il est souvent représenté comme un homme imposant, barbu, tenant une foudre dans sa main. Zeus était marié à sa sœur Héra, la déesse du mariage, mais il avait également de nombreuses liaisons avec d'autres déesses et mortelles. Certains des mythes les plus célèbres liés à Zeus incluent son combat contre les Titans pour devenir le dieu suprême, son emprisonnement des Cyclopes dans le Tartare, et sa participation à la guerre de Troie en soutenant les Grecs. Dans l'un des mythes les plus connus, Zeus a été trompé par son épouse jalouse Héra pour cacher la naissance de son fils Héraclès (Hercule) issu de sa liaison avec une mortelle. Pour se venger, Héra a envoyé des serpents pour tuer Héraclès dans son berceau, mais le bébé a survécu et est devenu un héros légendaire en accomplissant des exploits incroyables. Les mythes liés à Zeus sont nombreux et variés, reflétant l'importance de ce dieu dans la mythologie grecque.
