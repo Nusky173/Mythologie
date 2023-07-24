@@ -1,4 +1,4 @@
-import { getPostData } from "../../../../lib/posts";
+import { getPostData } from "../../../../../lib/posts";
 
 export default async function Personality({
     params,

@@ -7,7 +7,11 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
-}) {
+}) 
+
+
+
+{
   return (
     <html lang="fr">
       {/*
@@ -24,11 +28,14 @@ export default function RootLayout({
               </Link>
             </div>
             <h1 className={styles.title}> Mythologie </h1>
+            <Link className={styles.navBar} href={"/mythology"}>
+                <button className={styles.visitButton}> Parcourir </button>
+            </Link>
           </header>
           <main className={styles.main}>
-            <aside className={styles.sidebar}>
+            {/* <aside className={styles.sidebar}>
               <SideBar />
-            </aside>
+            </aside> */}
             <section className={styles.content}>
               {children}
             </section>

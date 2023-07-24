@@ -66,3 +66,26 @@
     font-size: 2rem;
     color: red;
   }
+
+
+  .navBar {
+    height: 100%;
+    width: 120px;
+    text-align: center;
+  }
+
+  .visitButton {
+    background-color: var(--color-bg-variant);
+    color: white;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  .visitButton:hover {
+    background-color: #11114c8e;
+    background-clip: content-box;
+    border-radius: 10px;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }

@@ -8,6 +8,7 @@ import html from 'remark-html'
 const postDirectoryRoot = path.join(process.cwd(), "blogposts")
 
 export function getPostOfSubDirectory(subDirectory: string) {
+    console.log("tet");
 
     const explicitDirectoryName = postDirectoryRoot + "/" + subDirectory;
 
