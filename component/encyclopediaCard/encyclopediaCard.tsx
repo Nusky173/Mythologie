@@ -1,16 +1,17 @@
+import Link from 'next/link';
+import { tabsObject } from '../../type';
 import styles from './encyclopediaCard.module.css'
 
 type EncyclopediaCardProperty = {
-    name: string
+    item: tabsObject
 }
 
 const EncyclopediaCard = (property: EncyclopediaCardProperty) => {
     
-
     return (
-        <div className={styles.card}>
-            {property.name}
-        </div>
+        <Link href={property.item.route} className={styles.card}>
+            {property.item.name}
+        </Link>
     );
 }
 

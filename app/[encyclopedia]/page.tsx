@@ -17,15 +17,15 @@ export default function Encyclopedia({
   const encyclopedia = params.encyclopedia;
   
   const navBarInit: tabsObject[] = [
-    {id: "greek", name: "Grecque", route: "greek", subTabs: [
-      {id: "god", name: "Dieux", route: "greek/god", subTabs: []},
-      {id: "halfgod", name: "Demi-dieux", route: "greek/halfgod", subTabs: []},
+    {id: "greek", name: "Grecque", route: "mythology/greek", subTabs: [
+      {id: "god", name: "Dieux", route: "mythology/greek/god", subTabs: []},
+      {id: "halfgod", name: "Demi-dieux", route: "mythology/greek/halfgod", subTabs: []},
       {id: "heroes", name: "Héros", route: "greek/heroes", subTabs: []},
     ]},
-    {id: "roman", name: "Romaine", route: "roman", subTabs: [
-      {id: "god", name: "Dieux", route: "roman/god", subTabs: []},
-      {id: "halfgod", name: "Demi-dieux", route: "roman/halfgod", subTabs: []},
-      {id: "heroes", name: "Héros", route: "roman/heroes", subTabs: []},
+    {id: "roman", name: "Romaine", route: "mythology/roman", subTabs: [
+      {id: "god", name: "Dieux", route: "mythology/roman/god", subTabs: []},
+      {id: "halfgod", name: "Demi-dieux", route: "mythology/roman/halfgod", subTabs: []},
+      {id: "heroes", name: "Héros", route: "mythology/roman/heroes", subTabs: []},
     ]},
   ];
   
@@ -34,7 +34,7 @@ export default function Encyclopedia({
         {navBarInit !== undefined &&
           navBarInit.map((item, key) => {
             return (
-              <EncyclopediaCard key={key} name={item.name}></EncyclopediaCard>
+              <EncyclopediaCard key={key} item={item}></EncyclopediaCard>
             )})
           }
           

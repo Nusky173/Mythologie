@@ -1,4 +1,5 @@
 import { getPostData } from '../../../lib/posts';
+import styles from "./mythology.module.css"
 
 export default async function Mythology({
     params,
@@ -18,9 +19,11 @@ export default async function Mythology({
            </h3>
            <article>
             <section dangerouslySetInnerHTML={{ __html: contentHtml}}>
-
             </section>
            </article>
+           <div className={styles.container}>
+
+           </div>
         </div>
     )
 }

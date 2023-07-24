@@ -1,5 +1,7 @@
 .card {
     max-width: 250px;
+    color: white;
+    text-decoration: none;
     max-height: 270px;
     width: 250px;
     height: 270px;
