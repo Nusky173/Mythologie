@@ -8,10 +8,8 @@ const EncyclopediaCard = (property: EncyclopediaCardProperty) => {
     
 
     return (
-        <div className={styles.cardGrid}>
-            <div className={styles.card}>
-                {property.name}
-            </div>
+        <div className={styles.card}>
+            {property.name}
         </div>
     );
 }

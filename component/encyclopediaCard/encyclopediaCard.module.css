@@ -1,16 +1,12 @@
-.cardContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-
 .card {
     max-width: 250px;
     max-height: 270px;
-    height: 100%;
-    width: 100%;
-    background-color: #0F00C1; 
+    width: 250px;
+    height: 270px;
+    background-color: #1e11ae;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border: ridge white 1px;
 }
