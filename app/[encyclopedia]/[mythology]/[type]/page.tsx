@@ -1,4 +1,6 @@
-import { useRouter } from 'next/router'
+import EncyclopediaCardContainer from '../../../../component/encyclopediaCardContainer/encyclopediaCardContainer';
+import { getAllPostByTypeForSubDir } from '../../../../lib/posts';
+import styles from "./type.module.css"
 
 export default function Type({
     params,
@@ -6,11 +8,11 @@ export default function Type({
     params: { mythology: string, type: string };
   }) {
 
-    
+    const articlesCard = getAllPostByTypeForSubDir(params.mythology, params.type)
 
     return (
-        <div>
-            Je suis la page {params.type} de la mythologie {params.mythology}
+        <div className={styles.container}>
+            <EncyclopediaCardContainer listItems={articlesCard}></EncyclopediaCardContainer>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import { getPostData } from '../../../lib/posts';
 import styles from "./mythology.module.css"
+import EncyclopediaCardContainer from '../../../component/encyclopediaCardContainer/encyclopediaCardContainer';
 
 export default async function Mythology({
     params,
@@ -22,7 +23,7 @@ export default async function Mythology({
             </section>
            </article>
            <div className={styles.container}>
-
+              <EncyclopediaCardContainer></EncyclopediaCardContainer>
            </div>
         </div>
     )

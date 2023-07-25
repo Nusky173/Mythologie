@@ -1,4 +1,4 @@
 ---
-title: 'Poséidon'
+title: 'Artémis'
 type: 'God'
 ---

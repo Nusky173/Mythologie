@@ -33,9 +33,6 @@ export default function RootLayout({
             </Link>
           </header>
           <main className={styles.main}>
-            {/* <aside className={styles.sidebar}>
-              <SideBar />
-            </aside> */}
             <section className={styles.content}>
               {children}
             </section>

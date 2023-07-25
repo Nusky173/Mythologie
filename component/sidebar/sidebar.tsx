@@ -173,10 +173,6 @@ const SideBar = () => {
         setNavBarItems();
     }, [pathname])
 
-    useEffect(() => {
-
-    }, [currentNavBar])
-
     return (
         <div className={styles.sidebarcontent}> 
             {pathname !== "/" && <div className={styles.location}> {locationText} </div>}

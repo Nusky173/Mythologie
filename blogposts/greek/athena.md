@@ -1,4 +1,4 @@
 ---
-title: 'Poséidon'
+title: 'Athena'
 type: 'God'
 ---

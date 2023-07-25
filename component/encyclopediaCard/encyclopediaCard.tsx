@@ -1,9 +1,11 @@
+"use client"
+
 import Link from 'next/link';
-import { tabsObject } from '../../type';
+import { TabsObject } from '../../type';
 import styles from './encyclopediaCard.module.css'
 
 type EncyclopediaCardProperty = {
-    item: tabsObject
+    item: TabsObject
 }
 
 const EncyclopediaCard = (property: EncyclopediaCardProperty) => {

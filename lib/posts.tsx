@@ -1,4 +1,4 @@
-import fs from "fs"
+import * as fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 import { BlogPost } from "../type";
@@ -9,8 +9,6 @@ import { MythologyType } from "../enum";
 const postDirectoryRoot = path.join(process.cwd(), "blogposts")
 
 export function getPostOfSubDirectory(subDirectory: string) {
-    console.log("tet");
-
     const explicitDirectoryName = postDirectoryRoot + "/" + subDirectory;
 
     const fileNames = fs.readdirSync(explicitDirectoryName);
@@ -19,7 +17,7 @@ export function getPostOfSubDirectory(subDirectory: string) {
         const id = fileName.replace(/\.md$/, '');
 
         const fullPath = path.join(explicitDirectoryName, fileName);
-        const fileContents = fs.readFileSync(fullPath, 'utf8');
+        const fileContents = fs.readFileSync(fullPath, { encoding: 'utf8'});
         
         const matterResult = matter(fileContents);
 
@@ -47,6 +45,24 @@ export function getPostById(subDirectory: string, id: string) {
     })
 
     return post;
+}
+
+export function getAllPostByTypeForSubDir(subDirectory: string, type: string) {
+
+    let result = [];
+
+    const allPostData = getPostOfSubDirectory(subDirectory);
+    console.log(allPostData + " " + allPostData.length);
+
+
+    result = allPostData.filter(e => {
+        if(e.type !== undefined) {
+            return e.type.toLowerCase() === type.toLowerCase();
+        }
+    })
+
+    return result;
+
 }
 
 export async function getPostData(subDirectory: string, id: string) {
