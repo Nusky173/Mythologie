@@ -1,10 +1,9 @@
 'use client'
 
-import { useState } from "react";
-import { tabsObject } from "../../type";
-import { usePathname } from "next/navigation";
+import { TabsObject } from "../../type";
 import EncyclopediaCard from "../../component/encyclopediaCard/encyclopediaCard";
 import styles from "./encyclopedia.module.css";
+import { MythologyType } from "../../enum";
 
 
 
@@ -16,16 +15,16 @@ export default function Encyclopedia({
 
   const encyclopedia = params.encyclopedia;
   
-  const navBarInit: tabsObject[] = [
+  const navBarInit: TabsObject[] = [
     {id: "greek", name: "Grecque", route: "mythology/greek", subTabs: [
-      {id: "god", name: "Dieux", route: "mythology/greek/god", subTabs: []},
-      {id: "halfgod", name: "Demi-dieux", route: "mythology/greek/halfgod", subTabs: []},
-      {id: "heroes", name: "Héros", route: "greek/heroes", subTabs: []},
+      {id: MythologyType.GOD, name: "Dieux", route: "mythology/greek/god", subTabs: []},
+      {id: MythologyType.HALFGOD, name: "Demi-dieux", route: "mythology/greek/halfgod", subTabs: []},
+      {id: MythologyType.HEROES, name: "Héros", route: "mythology/greek/heroes", subTabs: []},
     ]},
     {id: "roman", name: "Romaine", route: "mythology/roman", subTabs: [
-      {id: "god", name: "Dieux", route: "mythology/roman/god", subTabs: []},
-      {id: "halfgod", name: "Demi-dieux", route: "mythology/roman/halfgod", subTabs: []},
-      {id: "heroes", name: "Héros", route: "mythology/roman/heroes", subTabs: []},
+      {id: MythologyType.GOD, name: "Dieux", route: "mythology/roman/god", subTabs: []},
+      {id: MythologyType.HALFGOD, name: "Demi-dieux", route: "mythology/roman/halfgod", subTabs: []},
+      {id: MythologyType.HEROES, name: "Héros", route: "mythology/roman/heroes", subTabs: []},
     ]},
   ];
   

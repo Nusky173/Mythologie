@@ -1,4 +1,4 @@
-export type tabsObject = {
+export type TabsObject = {
     name: string;
     subTabs?: tabsObject[];
     id: string;

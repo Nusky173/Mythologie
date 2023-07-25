@@ -1,12 +1,12 @@
 'use client'
 
-import { tabsObject } from "../../type";
+import { TabsObject } from "../../type";
 import styles from "./sidebar.module.css"
 import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 
-const navBarInit: tabsObject[] = [
+const navBarInit: TabsObject[] = [
     {id: "greek", name: "Grecque", route: "greek", subTabs: [
       {id: "god", name: "Dieux", route: "greek/god", subTabs: []},
       {id: "halfgod", name: "Demi-dieux", route: "greek/halfgod", subTabs: []},
@@ -19,8 +19,8 @@ const navBarInit: tabsObject[] = [
     ]},
 ];
 
-let currentNavBar : tabsObject[] = navBarInit;
-let navBarBuffer: tabsObject | undefined;
+let currentNavBar : TabsObject[] = navBarInit;
+let navBarBuffer: TabsObject | undefined;
 
 const SideBar = () => { 
     const [locationText, setLocationText] = useState("");
@@ -63,7 +63,7 @@ const SideBar = () => {
      * @param depth depth of navBarInit
      * @returns the clear name of current Location
      */
-    const setLocationTextRec = (array: string[], recursiveArray: tabsObject[], depth: number) : string => {
+    const setLocationTextRec = (array: string[], recursiveArray: TabsObject[], depth: number) : string => {
         let result = '';
         let i = 0;
 
@@ -94,8 +94,8 @@ const SideBar = () => {
      * @param depth depth of navBarInit
      * @returns current tabs object depend on location
      */
-    const findCurrentTabsObjectRec = (array: string[], recursiveArray: tabsObject[], depth: number) : tabsObject => {
-        let result: tabsObject;
+    const findCurrentTabsObjectRec = (array: string[], recursiveArray: TabsObject[], depth: number) : TabsObject => {
+        let result: TabsObject;
         let i = 0;
         
         while(i < recursiveArray.length) {
@@ -159,7 +159,7 @@ const SideBar = () => {
 
             if(currentTabsObject?.subTabs!.length <= 0) {
                 setBufferNavBar();
-                currentNavBar = navBarBuffer!.subTabs!.filter((e: tabsObject) => {
+                currentNavBar = navBarBuffer!.subTabs!.filter((e: TabsObject) => {
                     return e.id !== currentTabsObject?.id
                 });
             } else {

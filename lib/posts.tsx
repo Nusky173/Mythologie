@@ -4,6 +4,7 @@ import matter from "gray-matter"
 import { BlogPost } from "../type";
 import { remark } from 'remark'
 import html from 'remark-html'
+import { MythologyType } from "../enum";
 
 const postDirectoryRoot = path.join(process.cwd(), "blogposts")
 
@@ -35,6 +36,8 @@ export function getPostOfSubDirectory(subDirectory: string) {
 }
 
 export function getPostById(subDirectory: string, id: string) {
+    if(id === MythologyType.GOD || MythologyType.HEROES || MythologyType.HALFGOD) return;
+
     const explicitDirectoryName = postDirectoryRoot + "/" + subDirectory;
 
     const fileNames = fs.readdirSync(explicitDirectoryName);
