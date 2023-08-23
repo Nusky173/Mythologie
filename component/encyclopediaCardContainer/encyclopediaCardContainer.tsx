@@ -29,8 +29,8 @@ const EncyclopediaCardContainer = (property: EncyclopediaCardContainerProperty) 
                         route: pathname + "/" + item.id
                     }
                     return (
-                        <div className={styles.child} key={key}>
-                            <EncyclopediaCard  item={newTabsObject} ></EncyclopediaCard>
+                        <div className={styles.leafChild} key={key}>
+                            <EncyclopediaCard  item={newTabsObject}></EncyclopediaCard>
                         </div>
                     )
                 })
@@ -38,7 +38,7 @@ const EncyclopediaCardContainer = (property: EncyclopediaCardContainerProperty) 
             {propsListItem === undefined && listItems !== undefined &&
                     listItems.map((item,key) => {
                         return (
-                            <div className={styles.child} key={key}>
+                            <div className={styles.nodeChild} key={key}>
                                 <EncyclopediaCard item={item}></EncyclopediaCard>
                             </div>
                         )

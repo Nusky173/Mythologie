@@ -2,29 +2,36 @@
     height: 100%;
     display: flex;
     gap: 20px 0;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     justify-items: center;
     flex-wrap: wrap;
 }
 
-.child {
+.nodeChild,
+.leafChild {
     width: 250px;
 }
 
-.child:nth-child(7n+1),
-.child:nth-child(7n+2),
-.child:nth-child(7n+3),
-.child:nth-child(7n+4) {
+.nodeChild {
+    height: 450px;
+    display: flex;
+    justify-content: center;
+}
+
+.leafChild:nth-child(7n+1),
+.leafChild:nth-child(7n+2),
+.leafChild:nth-child(7n+3),
+.leafChild:nth-child(7n+4) {
     flex-basis: 24%;
     height: 100px;
     display: flex;
     justify-content: center;
 }
 
-.child:nth-child(7n+5),
-.child:nth-child(7n+6),
-.child:nth-child(7n+7)
+.leafChild:nth-child(7n+5),
+.leafChild:nth-child(7n+6),
+.leafChild:nth-child(7n+7)
 {
     display: flex;
     justify-content: center;
