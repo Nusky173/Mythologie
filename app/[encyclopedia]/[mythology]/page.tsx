@@ -11,18 +11,13 @@ export default async function Mythology({
     const {title, type, contentHtml } = await getPostData(params.mythology, params.mythology)
 
     return (
-        <div>
-           <h1>
+        <div className={styles.container}>
+           <h1 className={styles.title}>
              {title}
            </h1>
-           <h3>
-             {type}
-           </h3>
-           <article>
-            <section dangerouslySetInnerHTML={{ __html: contentHtml}}>
-            </section>
-           </article>
-           <div className={styles.container}>
+          <div dangerouslySetInnerHTML={{ __html: contentHtml}} className={styles.paragraph}>
+          </div>
+           <div>
               <EncyclopediaCardContainer></EncyclopediaCardContainer>
            </div>
         </div>
