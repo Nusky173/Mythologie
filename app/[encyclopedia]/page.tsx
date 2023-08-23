@@ -9,12 +9,6 @@ export default function Encyclopedia({
   
   return (
       <div className={styles.container}>
-        {/* {navBarInit !== undefined &&
-          navBarInit.map((item, key) => {
-            return (
-              <EncyclopediaCard key={key} item={item}></EncyclopediaCard>
-            )})
-          } */}
         <EncyclopediaCardContainer></EncyclopediaCardContainer>
       </div>
   )

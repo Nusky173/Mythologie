@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import SideBar from '../component/sidebar/sidebar';
 import './globals.css'
 import styles from './layout.module.css'
+import Loading from './loading';
+import { Suspense } from 'react';
 
 export default function RootLayout({
   children,
@@ -34,7 +35,9 @@ export default function RootLayout({
           </header>
           <main className={styles.main}>
             <section className={styles.content}>
-              {children}
+              <Suspense fallback={<Loading/>}>
+                {children}
+              </Suspense>
             </section>
           </main>
         </div>
