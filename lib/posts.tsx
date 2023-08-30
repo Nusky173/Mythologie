@@ -52,7 +52,6 @@ export function getAllPostByTypeForSubDir(subDirectory: string, type: string) {
     let result = [];
 
     const allPostData = getPostOfSubDirectory(subDirectory);
-    console.log(allPostData + " " + allPostData.length);
 
 
     result = allPostData.filter(e => {
