@@ -19,9 +19,9 @@
 }
 
 .paragraph {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
   width: 80%;
-  line-height: 2rem;
   text-align:justify;
   text-indent: 2rem;
   text-rendering: optimizeLegibility;
@@ -36,6 +36,7 @@
   gap: 10px;
   justify-content: center;
   align-items: center;
+  margin-top: 2.5rem;
 }
 
 .arrowRight {
@@ -51,7 +52,7 @@
   border: 2px solid var(--color-border);
   color: var(--color-primary);
   padding: 15px;
-  font-size: 1.05rem;
+  font-weight: bolder;
 }
 
 .button:hover {

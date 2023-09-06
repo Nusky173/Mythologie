@@ -30,7 +30,17 @@ const EncyclopediaCardContainer = (property: EncyclopediaCardContainerProperty) 
                     }
                     return (
                         <div className={styles.leafChild} key={key}>
-                            <EncyclopediaCard  item={newTabsObject}></EncyclopediaCard>
+                            <span className={styles.one}></span>
+                                <span className={styles.two}></span>
+                                <span className={styles.three}></span>
+                                <span className={styles.four}></span>
+                                <span className={styles.five}></span>
+                                <span className={styles.six}></span>
+                                <span className={styles.seven}></span>
+                                <span className={styles.eight}></span>
+                            <EncyclopediaCard  item={newTabsObject}>
+                                
+                            </EncyclopediaCard>
                         </div>
                     )
                 })
@@ -39,7 +49,17 @@ const EncyclopediaCardContainer = (property: EncyclopediaCardContainerProperty) 
                     listItems.map((item,key) => {
                         return (
                             <div className={styles.nodeChild} key={key}>
-                                <EncyclopediaCard item={item}></EncyclopediaCard>
+                                <span className={styles.one}></span>
+                                <span className={styles.two}></span>
+                                <span className={styles.three}></span>
+                                <span className={styles.four}></span>
+                                <span className={styles.five}></span>
+                                <span className={styles.six}></span>
+                                <span className={styles.seven}></span>
+                                <span className={styles.eight}></span>
+                                <EncyclopediaCard item={item}>
+                                    
+                                </EncyclopediaCard>
                             </div>
                         )
                     })

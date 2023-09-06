@@ -3,7 +3,6 @@ import './globals.css'
 import styles from './layout.module.css'
 import Loading from './loading';
 import { Suspense } from 'react';
-import Carroussel from '../component/carroussel/carroussel';
 
 export default function RootLayout({
   children,
@@ -41,6 +40,7 @@ export default function RootLayout({
               </Suspense>
             </section>
           </main>
+          <footer className={styles.footer}></footer>
         </div>
       </body>
     </html>
