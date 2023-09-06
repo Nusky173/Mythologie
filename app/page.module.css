@@ -1,7 +1,17 @@
 .container {
-  padding: 5rem 5rem;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.carroussel {
+  width: 40%;
+}
+
+.presentation {
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -19,4 +29,34 @@
 
 .paragraph:not(:last-child) {
   margin-bottom: 2rem;
+}
+
+.navigate {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrowRight {
+  width: 0; 
+  height: 0; 
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  
+  border-left: 15px solid var(--color-border);
+}
+
+.button {
+  border: 2px solid var(--color-border);
+  color: var(--color-primary);
+  padding: 15px;
+  font-size: 1.05rem;
+}
+
+.button:hover {
+  background-clip: content-box;
+  border-radius: 10px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
