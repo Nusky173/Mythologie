@@ -5,6 +5,5 @@ export enum Mythology {
 
 export enum MythologyType {
     GOD = "god",
-    HALFGOD = "halfgod",
     HEROES = "heroes"
 }

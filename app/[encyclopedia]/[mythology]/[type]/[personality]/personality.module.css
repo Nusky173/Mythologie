@@ -1,0 +1,16 @@
+.container {
+    padding: 20px;
+}
+
+.title {
+    color: var(--color-primary);
+}
+
+.informations {
+    font-weight: 500;
+    margin: 5px 15px;
+    color: var(--color-primary)
+}
+.attrait {
+   margin-bottom: 5px;
+}

@@ -25,6 +25,7 @@ export function getPostOfSubDirectory(subDirectory: string) {
             id, 
             title: matterResult.data.title,
             type: matterResult.data.type,
+            attrait: matterResult.data.type,
         }
 
         return blogPost;
@@ -34,7 +35,7 @@ export function getPostOfSubDirectory(subDirectory: string) {
 }
 
 export function getPostById(subDirectory: string, id: string) {
-    if(id === MythologyType.GOD || MythologyType.HEROES || MythologyType.HALFGOD) return;
+    if(id === MythologyType.GOD || MythologyType.HEROES) return;
 
     const explicitDirectoryName = postDirectoryRoot + "/" + subDirectory;
 
@@ -83,6 +84,7 @@ export async function getPostData(subDirectory: string, id: string) {
         id,
         title: matterResult.data.title,
         type: matterResult.data.type,
+        attrait: matterResult.data.attrait,
         contentHtml,
     }
 

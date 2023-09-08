@@ -9,5 +9,6 @@ export type BlogPost = {
     id: string;
     title: string;
     type: string;
+    attrait: string;
 }
 

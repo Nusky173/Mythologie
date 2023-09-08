@@ -8,6 +8,5 @@
     background-color: var(--color-bg);
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
+    justify-content: center; 
 }
