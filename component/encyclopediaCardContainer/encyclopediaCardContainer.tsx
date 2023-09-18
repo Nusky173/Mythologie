@@ -29,15 +29,7 @@ const EncyclopediaCardContainer = (property: EncyclopediaCardContainerProperty) 
                         route: pathname + "/" + item.id
                     }
                     return (
-                        <div className={styles.leafChild} key={key}>
-                            <span className={styles.one}></span>
-                                <span className={styles.two}></span>
-                                <span className={styles.three}></span>
-                                <span className={styles.four}></span>
-                                <span className={styles.five}></span>
-                                <span className={styles.six}></span>
-                                <span className={styles.seven}></span>
-                                <span className={styles.eight}></span>
+                        <div className={styles.node} key={key}>
                             <EncyclopediaCard  item={newTabsObject}>
                                 
                             </EncyclopediaCard>
@@ -48,15 +40,7 @@ const EncyclopediaCardContainer = (property: EncyclopediaCardContainerProperty) 
             {propsListItem === undefined && listItems !== undefined &&
                     listItems.map((item,key) => {
                         return (
-                            <div className={styles.nodeChild} key={key}>
-                                <span className={styles.one}></span>
-                                <span className={styles.two}></span>
-                                <span className={styles.three}></span>
-                                <span className={styles.four}></span>
-                                <span className={styles.five}></span>
-                                <span className={styles.six}></span>
-                                <span className={styles.seven}></span>
-                                <span className={styles.eight}></span>
+                            <div className={styles.node} key={key}>
                                 <EncyclopediaCard item={item}>
                                     
                                 </EncyclopediaCard>
