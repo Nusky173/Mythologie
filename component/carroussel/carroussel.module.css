@@ -1,0 +1,18 @@
+.carroussel {
+    width: 100%;
+}
+
+.img0 {
+    background:  no-repeat center center / contain url("../../public/38830.PNG");
+    height: 500px;
+}
+
+.img1 {
+    background:  no-repeat center center / contain url("../../public/eye-udjat-EG.PNG");
+    height: 500px;
+}
+
+.img2 {
+    background:  no-repeat center center / contain url("../../public/40169.PNG");
+    height: 500px;
+}
