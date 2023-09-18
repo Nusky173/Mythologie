@@ -2,6 +2,12 @@
     padding: 20px;
 }
 
+.side {
+    top: 0;
+    position: sticky;
+    padding-top: 30px;
+}
+
 .title {
     color: var(--color-primary);
 }
@@ -9,7 +15,13 @@
 .informations {
     font-weight: 500;
     margin: 5px 15px;
-    color: var(--color-primary)
+    color: var(--color-primary);
+}
+
+.text {
+    margin: 0 auto;
+    max-width: 660px;
+    position: relative;
 }
 .attrait {
    margin-bottom: 5px;

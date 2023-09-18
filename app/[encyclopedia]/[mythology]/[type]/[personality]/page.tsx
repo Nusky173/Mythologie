@@ -20,6 +20,7 @@ export default async function Personality({
 
     return (
       <div className={styles.container}>
+        <div className={styles.side}>
          <h1 className={styles.title}>
            {title}
          </h1>
@@ -32,6 +33,7 @@ export default async function Personality({
             })
             }
          </h4>
+         </div>
          <article className={styles.text}>
           <div dangerouslySetInnerHTML={{ __html: contentHtml}}></div>
          </article>
