@@ -1,18 +1,31 @@
-.carroussel {
-    width: 100%;
+.inner {
+    transition: transform 0.3s;
+    white-space: nowrap;
 }
 
-.img0 {
-    background:  no-repeat center center / contain url("../../public/38830.PNG");
+.carroussel {
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.carroussel_item{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 40vw;
     height: 500px;
 }
 
 .img1 {
+    background:  no-repeat center center / contain url("../../public/38830.PNG");
+    
+}
+
+.img0 {
     background:  no-repeat center center / contain url("../../public/eye-udjat-EG.PNG");
-    height: 500px;
 }
 
 .img2 {
     background:  no-repeat center center / contain url("../../public/40169.PNG");
-    height: 500px;
+    transform: scale(0.8);
 }
