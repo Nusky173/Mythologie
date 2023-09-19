@@ -33,7 +33,7 @@ export default async function Personality({
             })
             }
          </h4>
-         </div>
+        </div>
          <article className={styles.text}>
           <div dangerouslySetInnerHTML={{ __html: contentHtml}}></div>
          </article>

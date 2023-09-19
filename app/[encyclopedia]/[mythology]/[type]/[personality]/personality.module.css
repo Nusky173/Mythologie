@@ -1,25 +1,26 @@
 .container {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .side {
     top: 0;
     position: sticky;
-    padding-top: 30px;
+    padding: 30px 0 0 30px;
 }
 
 .title {
-    color: var(--color-primary);
+    color: var(--color-primary-variant);
 }
 
 .informations {
     font-weight: 500;
     margin: 5px 15px;
-    color: var(--color-primary);
+    color: var(--color-primary-variant);
 }
 
 .text {
-    margin: 0 auto;
+    margin: -60px auto 60px auto;
+    text-indent: 2rem;
     max-width: 660px;
     position: relative;
 }
