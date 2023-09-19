@@ -32,8 +32,13 @@
 
   .logobutton {
     background-color: var(--color-bg-variant);
-    background:  no-repeat center center / contain url("../public/favicon.ico");
+    background:  no-repeat center center / contain url("../public/logo.png");
+    transform: scale(2);
     border: none;
+  }
+
+  .logobutton:hover {
+    cursor:pointer;
   }
   
   .main {
