@@ -10,7 +10,7 @@ export default function Home() {
       </div>
       <div className={styles.presentation}>
         <p className={styles.paragraph}>
-        Ce site fournit des informations précises et détaillées sur les mythes, les légendes et les dieux de différentes 
+        Ce site vous propose une collection  d'informations sur les mythes, les légendes et les dieux de différentes 
         civilisations, allant de la Grèce antique à l'Egypte ancienne en passant par l'Amérique du Sud et l'Asie. 
         </p>
         <p className={styles.paragraph}>
