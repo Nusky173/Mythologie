@@ -21,22 +21,26 @@ export default async function Personality({
     return (
       <div className={styles.container}>
         <div className={styles.side}>
-         <h1 className={styles.title}>
-           {title}
-         </h1>
-         <h4 className={styles.informations}>
-           {tabAttrait.length > 0 && 
-            tabAttrait.map((e, key) => {
-              return (
-                  <div className={styles.attrait} key={key}> {e} </div> 
-                );
-            })
-            }
-         </h4>
+          <div className={styles.informations}>
+          <h1 className={styles.title}>
+            {title}
+          </h1>
+          <h4 className={styles.attract}>
+            {tabAttrait.length > 0 && 
+              tabAttrait.map((e, key) => {
+                return (
+                    <div className={styles.attrait} key={key}> {e} </div> 
+                  );
+              })
+              }
+          </h4>
+          </div>
         </div>
-         <article className={styles.text}>
-          <div dangerouslySetInnerHTML={{ __html: contentHtml}}></div>
-         </article>
+        <div className={styles.text_container}>
+          <article className={styles.text}>
+            <div dangerouslySetInnerHTML={{ __html: contentHtml}}></div>
+          </article>
+        </div>
       </div>
   )
 }
