@@ -8,9 +8,11 @@ export const navBarInit: TabsObject[] = [
       {id: MythologyType.GOD, name: "Dieux", route: "mythology/greek/god", subTabs: []},
       {id: MythologyType.HEROES, name: "Héros", route: "mythology/greek/heros", subTabs: []},
     ]},
-    {id: Mythology.ROMAN, name: "Romaine", route: "mythology/roman", subTabs: [
-      {id: MythologyType.GOD, name: "Dieux", route: "mythology/roman/god", subTabs: []},
-      {id: MythologyType.HEROES, name: "Héros", route: "mythology/roman/heros", subTabs: []},
+    {id: Mythology.EGYPT, name: "Egyptienne", route: "mythology/egypt", subTabs: [
+      {id: MythologyType.GOD, name: "Dieux", route: "mythology/egypt/god", subTabs: []},
+    ]},
+    {id: Mythology.NORDIC, name: "Nordique", route: "mythology/nordic", subTabs: [
+      {id: MythologyType.GOD, name: "Dieux", route: "mythology/nordic/god", subTabs: []},
     ]},
   ];
 

@@ -1,5 +1,7 @@
 export enum Mythology {
     GREEK = "greek",
+    EGYPT = "egypt",
+    NORDIC = "nordic",
     ROMAN = "roman",
 }
 
