@@ -1,7 +1,7 @@
 ---
 title: 'Zeus'
 type: 'God'
-attrait: 'Dieux du ciel - Roi des dieux'
+attrait: 'Dieux du ciel - Roi des dieux - Totem: Aigle'
 ---
 
 Dans la mythologie grecque, Zeus est souvent représenté comme un homme barbu, imposant et puissant, avec un éclair à la main. Il est considéré comme le roi des dieux. Il est le fils de Cronos et de Rhéa. Voici quelques-uns des mythes les plus importants liés à Zeus.

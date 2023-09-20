@@ -1,7 +1,7 @@
 ---
 title: 'Aphrodite'
 type: 'God'
-attrait: 'Déesse de l’amour et du désir - Née de l’écume et d’Ouranos - Initia la guerre de Troie'
+attrait: 'Déesse de l’amour et du désir - Née de l’écume et d’Ouranos - Initia la guerre de Troie - Totem: Colombe'
 ---
 
 Aphrodite est connue pour être la plus belle déesses, celle de l'amour et du désir. Contrairement à tous les autres Olympiens, elle ne descend d'Ouranos et non de Cronos après que celui-ci coupa les organes sexuels de son pères (Ouranos), et les jeta dans la mèr. Elle a émergé de la mer, et fut portée jusqu'a Chypre. C'est sur cette île que se trouve le temple le plus populaire rattaché à la déesse.

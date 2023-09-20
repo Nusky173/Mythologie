@@ -1,7 +1,7 @@
 ---
 title: 'Apollon'
 type: 'God'
-attrait: 'Dieux du soleil, de la musique -  de la poésie et des arts - Frère d’Artèmis - Donne la mort aux hommes'
+attrait: 'Dieu du soleil, de la musique -  de la poésie et des arts - Frère d’Artèmis - Donne la mort aux hommes - Totem: Loup, cygne, corbeau'
 ---
 
 Apollon est un dieux polyvalent de par son incarnation du soleil. Il est à la fois le dieux de la poésie, de la musique et des arts en générale, et est souvent repréenté d'une lyre. Il est également lié à la lumière, la guérison, la beauté, la connaissance... Mais contrairement à ses précédentes qualifications, il est également celui qui représente la maladie. Et à l'aide de son arc et de ses flèches d'or, il décime les hommes.
