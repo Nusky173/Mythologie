@@ -5,6 +5,8 @@ import { BlogPost } from "../type";
 import { remark } from 'remark'
 import html from 'remark-html'
 import { MythologyType } from "../enum";
+import Error from "../app/error";
+import { UnexistingFileError } from "../error/UnexistingFileError/unexistingFileError";
 
 const postDirectoryRoot = path.join(process.cwd(), "blogposts")
 
@@ -117,7 +119,6 @@ export async function getPostData(subDirectory: string, id: string) {
 
         return blogPostWithHTML
     } catch (e) {
-        //return error 404
-        console.log("test")
+        throw new UnexistingFileError()
     }    
 }

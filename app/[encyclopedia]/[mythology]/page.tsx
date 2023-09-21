@@ -1,6 +1,7 @@
 import { getPostData } from '../../../lib/posts';
 import styles from "./mythology.module.css"
 import EncyclopediaCardContainer from '../../../component/encyclopediaCardContainer/encyclopediaCardContainer';
+import { UnexistingFileError } from '../../../error/UnexistingFileError/unexistingFileError';
 
 export default async function Mythology({
     params,

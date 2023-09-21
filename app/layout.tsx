@@ -3,6 +3,7 @@ import './globals.css'
 import styles from './layout.module.css'
 import Loading from './loading';
 import { Suspense } from 'react';
+import Error from './error';
 
 export default function RootLayout({
   children,
@@ -26,7 +27,7 @@ export default function RootLayout({
             <div className={styles.logo}>
               <Link href={"/"}> 
                 <button className={styles.logobutton}></button>
-              </Link>
+              </Link> 
             </div>
               <h1 className={styles.title}> Mythologie </h1>
               <Link className={styles.navBar} href={"/mythology"}>
