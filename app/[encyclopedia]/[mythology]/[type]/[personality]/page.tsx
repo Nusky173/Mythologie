@@ -10,13 +10,25 @@ export default async function Personality({
     const {title, type, attrait, contentHtml } = await getPostData(params.mythology, params.personality)
 
     const separateAttrait = (attrait: string) => {
-      const tab = attrait.split('-');
+      if(!attrait) {
+        return []
+      }
       
+      const tab = attrait.split('-');
       return tab
     }
 
     const tabAttrait = separateAttrait(attrait);
-    
+
+    const text = () => {
+      if(contentHtml.length > 0 ) {
+        return contentHtml;
+      } 
+
+      return "Page en construction";
+    }
+
+    const textHTML = text();    
 
     return (
       <div className={styles.container}>
@@ -38,7 +50,7 @@ export default async function Personality({
         </div>
         <div className={styles.text_container}>
           <article className={styles.text}>
-            <div dangerouslySetInnerHTML={{ __html: contentHtml}}></div>
+            <div dangerouslySetInnerHTML={{ __html: textHTML}}></div>
           </article>
         </div>
       </div>
