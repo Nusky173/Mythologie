@@ -15,6 +15,7 @@ const EncyclopediaCardContainer = (property: EncyclopediaCardContainerProperty) 
     const pathname = usePathname() || "/";
 
     const listItems = getLocationChildren(pathname);
+    console.log(listItems)
     
     const propsListItem = property.listItems;
 

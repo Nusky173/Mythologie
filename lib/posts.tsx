@@ -8,7 +8,12 @@ import { MythologyType } from "../enum";
 
 const postDirectoryRoot = path.join(process.cwd(), "blogposts")
 
-export function getPostOfSubDirectory(subDirectory: string) {
+/**
+ * 
+ * @param subDirectory a subdirectory of blogposts 
+ * @returns return all the md files on that subdirectory
+ */
+function getPostOfSubDirectory(subDirectory: string) {
     const explicitDirectoryName = postDirectoryRoot + "/" + subDirectory;
 
     const fileNames = fs.readdirSync(explicitDirectoryName);
@@ -34,6 +39,13 @@ export function getPostOfSubDirectory(subDirectory: string) {
     return allPostData;
 }
 
+/**
+ * 
+ * @param subDirectory ex: egypt
+ * @param id personnality ex: zeus
+ * @returns will return the md of zeus and all the information about it
+ */
+
 export function getPostById(subDirectory: string, id: string) {
     if(id === MythologyType.GOD || MythologyType.HEROES) return;
 
@@ -48,6 +60,12 @@ export function getPostById(subDirectory: string, id: string) {
     return post;
 }
 
+/**
+ * 
+ * @param subDirectory a directory
+ * @param type a type of Mythology.GOD / HEROES 
+ * @returns return all md files that match the type
+ */
 export function getAllPostByTypeForSubDir(subDirectory: string, type: string) {
 
     let result = [];
@@ -65,29 +83,41 @@ export function getAllPostByTypeForSubDir(subDirectory: string, type: string) {
 
 }
 
+/**
+ * 
+ * @param subDirectory a directory
+ * @param id an id ex: greek
+ * @returns return md file of the id.
+ */
 export async function getPostData(subDirectory: string, id: string) {
     const explicitDirectoryName = postDirectoryRoot + "/" + subDirectory;
 
-    const fullPath = path.join(explicitDirectoryName, `${id}.md`);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    try {
+        const fullPath = path.join(explicitDirectoryName, `${id}.md`);
 
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-    const processedContent = await remark()
-        .use(html)
-        .process(matterResult.content);
+        // Use gray-matter to parse the post metadata section
+        const matterResult = matter(fileContents);
 
-    const contentHtml = processedContent.toString();
+        const processedContent = await remark()
+            .use(html)
+            .process(matterResult.content);
 
-    const blogPostWithHTML: BlogPost & { contentHtml: string } = {
-        id,
-        title: matterResult.data.title,
-        type: matterResult.data.type,
-        attrait: matterResult.data.attrait,
-        contentHtml,
-    }
+        const contentHtml = processedContent.toString();
 
-    // Combine the data with the id
-    return blogPostWithHTML
+        // Combine the data with the id
+        const blogPostWithHTML: BlogPost & { contentHtml: string } = {
+            id,
+            title: matterResult.data.title,
+            type: matterResult.data.type,
+            attrait: matterResult.data.attrait,
+            contentHtml,
+        }
+
+        return blogPostWithHTML
+    } catch (e) {
+        //return error 404
+        console.log("test")
+    }    
 }
