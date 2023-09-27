@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 export const navBarInit: TabsObject[] = [
     {id: Mythology.GREEK, name: "Grecque", route: "mythology/greek", subTabs: [
       {id: MythologyType.GOD, name: "Dieux", route: "mythology/greek/god", subTabs: []},
-      {id: MythologyType.HEROES, name: "Héros", route: "mythology/greek/heros", subTabs: []},
+    //   {id: MythologyType.HEROES, name: "Héros", route: "mythology/greek/heroes", subTabs: []},
     ]},
     {id: Mythology.EGYPT, name: "Egyptienne", route: "mythology/egypt", subTabs: [
       {id: MythologyType.GOD, name: "Dieux", route: "mythology/egypt/god", subTabs: []},

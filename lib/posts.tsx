@@ -18,27 +18,38 @@ const postDirectoryRoot = path.join(process.cwd(), "blogposts")
 function getPostOfSubDirectory(subDirectory: string) {
     const explicitDirectoryName = postDirectoryRoot + "/" + subDirectory;
 
-    const fileNames = fs.readdirSync(explicitDirectoryName);
+    console.log(subDirectory);
+    try {
 
-    const allPostData = fileNames.map( fileName => {
-        const id = fileName.replace(/\.md$/, '');
+        const fileNames = fs.readdirSync(explicitDirectoryName);
 
-        const fullPath = path.join(explicitDirectoryName, fileName);
-        const fileContents = fs.readFileSync(fullPath, { encoding: 'utf8'});
-        
-        const matterResult = matter(fileContents);
+        const allPostData = fileNames.map( fileName => {
+            const id = fileName.replace(/\.md$/, '');
 
-        const blogPost: BlogPost = {
-            id, 
-            title: matterResult.data.title,
-            type: matterResult.data.type,
-            attrait: matterResult.data.type,
+            const fullPath = path.join(explicitDirectoryName, fileName);
+            const fileContents = fs.readFileSync(fullPath, { encoding: 'utf8'});
+            
+            const matterResult = matter(fileContents);
+
+            const blogPost: BlogPost = {
+                id, 
+                title: matterResult.data.title,
+                type: matterResult.data.type,
+                attrait: matterResult.data.type,
+            }
+
+            return blogPost;
+
+        })
+
+        if(allPostData.length === 0) {
+            return new UnexistingFileError();
         }
 
-        return blogPost;
-    })
-
-    return allPostData;
+        return allPostData;
+    } catch (e) {
+        throw new UnexistingFileError();
+    }
 }
 
 /**
@@ -72,17 +83,25 @@ export function getAllPostByTypeForSubDir(subDirectory: string, type: string) {
 
     let result = [];
 
-    const allPostData = getPostOfSubDirectory(subDirectory);
+    try {
 
+        const allPostData = getPostOfSubDirectory(subDirectory);
 
-    result = allPostData.filter(e => {
-        if(e.type !== undefined) {
-            return e.type.toLowerCase() === type.toLowerCase();
+        if(allPostData instanceof UnexistingFileError) {
+            return;
         }
-    })
 
-    return result;
 
+        result = allPostData.filter(e => {
+            if(e.type !== undefined) {
+                return e.type.toLowerCase() === type.toLowerCase();
+            }
+        })
+
+        return result;
+    } catch (e) {
+        throw new UnexistingFileError();
+    }
 }
 
 /**
