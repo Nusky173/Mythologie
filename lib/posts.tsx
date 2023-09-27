@@ -5,7 +5,6 @@ import { BlogPost } from "../type";
 import { remark } from 'remark'
 import html from 'remark-html'
 import { MythologyType } from "../enum";
-import Error from "../app/error";
 import { UnexistingFileError } from "../error/UnexistingFileError/unexistingFileError";
 
 const postDirectoryRoot = path.join(process.cwd(), "blogposts")

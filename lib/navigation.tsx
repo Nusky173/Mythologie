@@ -1,7 +1,5 @@
-import { usePathname } from "next/navigation";
 import { Mythology, MythologyType } from "../enum";
 import { TabsObject } from "../type";
-import { useRouter } from "next/router";
 import { UnexistingFileError } from "../error/UnexistingFileError/unexistingFileError";
 
 export const navBarInit: TabsObject[] = [
@@ -12,7 +10,7 @@ export const navBarInit: TabsObject[] = [
     {id: Mythology.EGYPT, name: "Egyptienne", route: "mythology/egypt", subTabs: [
       {id: MythologyType.GOD, name: "Dieux", route: "mythology/egypt/god", subTabs: []},
     ]},
-    {id: Mythology.NORDIC, name: "Nordique", route: "mythology/nordic", subTabs: [
+    {id: Mythology.NORDIC, name: "Scandinave", route: "mythology/nordic", subTabs: [
       {id: MythologyType.GOD, name: "Dieux", route: "mythology/nordic/god", subTabs: []},
     ]},
   ];
