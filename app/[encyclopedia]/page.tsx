@@ -3,10 +3,10 @@ import EncyclopediaCardContainer from "../../component/encyclopediaCardContainer
 import Loading from "./loading";
 import { Suspense } from "react";
 
-export default async function Encyclopedia({
+export default function Encyclopedia({
     props,
   }: {
-    props: {children: React.ReactNode, encyclopedia: string 
+    props: { encyclopedia: string 
 };
   }) {
   
