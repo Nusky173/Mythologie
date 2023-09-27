@@ -3,12 +3,7 @@ import EncyclopediaCardContainer from "../../component/encyclopediaCardContainer
 import Loading from "./loading";
 import { Suspense } from "react";
 
-export default function Encyclopedia({
-    props,
-  }: {
-    props: { encyclopedia: string 
-};
-  }) {
+export default function Encyclopedia() {
   
   return (
       <div className={styles.container}>
