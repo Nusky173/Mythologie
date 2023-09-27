@@ -10,9 +10,6 @@ export default async function Mythology({
   }) {
 
     const {title, type, contentHtml } = await getPostData(params.mythology, params.mythology)
-      .catch((error) => {
-        throw new UnexistingFileError();
-      })
 
     return (
         <div className={styles.container}>
