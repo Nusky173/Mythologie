@@ -28,7 +28,6 @@ const Carroussel = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             updateIndex()
-            console.log(activeIndex)
         }, 3000);
 
         return () => {

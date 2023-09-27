@@ -19,11 +19,17 @@ export default function Error({
 
   const router = useRouter();
 
+  reset = () => {
+    router.back();
+  }
+
+  const message = error.message
+
   return (
     <div className={styles.error_container}>
-      <h2 className={styles.error_message}>{error.message}</h2>
+      <h2 className={styles.error_message}>{message}</h2>
       <Link href={"/"}>
-          <button className={styles.error_button} onClick={() => {router.back()}}>Retour</button>
+          <button className={styles.error_button} onClick={() => {reset()}}>Retour</button>
       </Link>
     </div>
   )
