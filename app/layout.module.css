@@ -72,13 +72,26 @@
   }
 
   @media only screen and (max-width: 650px) {
+
+    .header {
+      padding: 0 2% 0 2%;
+      height: 100px;
+      min-height: 100px;
+    }
+
+    .visitButton {
+      font-size: 14px;
+      padding: 5px;
+    }
+
     .title {
-        display: none;
-        width: 0px;
+        font-size: 2.2rem;
+        margin-left: 10px;
     }
 
     .logo, .logobutton {
-      margin-left: 20px;
+      transform: scale(1.2);
+      margin-left: 0;
     }
     
 }
