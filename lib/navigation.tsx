@@ -45,7 +45,7 @@ export const getLocationChildren = (route: string) : TabsObject[] => {
 
     //need to find currentLocation recursively
     else {
-        const result = setLocationTextRec(locationArray, navBarInit, 1);
+        const result = setLocationTextRec(locationArray, navBarInit, 2);
         if(result.length === 0 ) {
             throw new UnexistingFileError();
         }
@@ -66,7 +66,7 @@ const setLocationTextRec = (array: string[], recursiveArray: TabsObject[], depth
     let i = 0;
 
     while(i < recursiveArray.length) {
-
+        
         if(array[depth] !== recursiveArray[i].id) {
             i++;
         }

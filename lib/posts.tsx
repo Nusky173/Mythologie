@@ -18,7 +18,6 @@ const postDirectoryRoot = path.join(process.cwd(), "blogposts")
 function getPostOfSubDirectory(subDirectory: string) {
     const explicitDirectoryName = postDirectoryRoot + "/" + subDirectory;
 
-    console.log(subDirectory);
     try {
 
         const fileNames = fs.readdirSync(explicitDirectoryName);
