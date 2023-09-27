@@ -63,9 +63,9 @@
   text-underline-offset: 6px;
 }
 
-@media screen and (max-width: 850px) {
+@media only screen and (max-width: 650px) {
   .carroussel {
-    visibility: hidden;
+    display: none;
     width: 0%;
   }
 

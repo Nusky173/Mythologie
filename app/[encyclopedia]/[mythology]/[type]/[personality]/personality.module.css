@@ -36,7 +36,7 @@
    margin-bottom: 5px;
 }
 
-@media screen and (max-width: 1255px) {
+@media only screen and (min-width: 750px) and (max-width: 1255px) {
     .side {
         width: 250px;
     }
@@ -48,18 +48,24 @@
     
 }
 
-@media screen and (max-width: 850px) {
+@media only screen and (min-width: 650px) and (max-width: 750px) {
     .side {
-        visibility: hidden;
-        height: 0px;
+        display: none;
+    }
+}
+
+
+
+@media only screen and (max-width: 650px) {
+    .side {
+        display: none;
     }
 
     .text {
-        margin-left: 5px;
-        margin-right: 5px;
+        padding: 0 20px;
         display: flex;
+        flex-wrap: nowrap;
         justify-content: center;
-        width: 100%;
     }
     
 }
