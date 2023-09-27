@@ -5,6 +5,8 @@
     align-items: center;
     justify-items: center;
     flex-wrap: wrap;
+    height: auto;
+    padding-bottom: 100px;
 }
 
 .node {
