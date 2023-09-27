@@ -2,6 +2,7 @@ import { usePathname } from "next/navigation";
 import { Mythology, MythologyType } from "../enum";
 import { TabsObject } from "../type";
 import { useRouter } from "next/router";
+import { UnexistingFileError } from "../error/UnexistingFileError/unexistingFileError";
 
 export const navBarInit: TabsObject[] = [
     {id: Mythology.GREEK, name: "Grecque", route: "mythology/greek", subTabs: [
@@ -45,6 +46,9 @@ export const getLocationChildren = (route: string) : TabsObject[] => {
     //need to find currentLocation recursively
     else {
         const result = setLocationTextRec(locationArray, navBarInit, 1);
+        if(result.length === 0 ) {
+            throw new UnexistingFileError();
+        }
         return result;
     }
 
